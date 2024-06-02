@@ -1,0 +1,665 @@
+@font-face {
+    font-family: "Archangelsk";
+    src: url(../fonts/ofont.ru_Archangelsk.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+}
+.title{
+    font-size: 62px;
+    line-height: 63px;
+    font-family: "Archangelsk",sans-serif;
+    font-weight: 400;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 36px;
+}
+.header {
+    height: 100vh;
+    position: relative;
+    background: url(../img/top1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: anim 10s linear infinite forwards;
+}
+@keyframes anim{
+    30%{
+        background: url(../img/top2.jpg);
+        background-size: 100% 100%;
+    }
+    60%{
+        background: url(../img/top3.jpg);
+        background-size: 100% 100%;
+    }
+}
+@keyframes anim1024{
+    30%{
+        background: url(../img/top10242.png);
+        background-size: 100% 100%;
+    }
+    60%{
+        background: url(../img/top10243.png);
+        background-size: 100% 100%;
+    }
+}
+@keyframes anim500{
+    30%{
+        background: url(../img/top5002.jpg);
+        background-size: 100% 100%;
+    }
+    60%{
+        background: url(../img/top5003.jpg);
+        background-size: 100% 100%;
+    }
+}
+
+.header-top {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header-top__logo {
+}
+.header-top__contact {
+    display: flex;
+
+}
+.header-top__contact li{
+    margin-left: 40px;
+} 
+.banner {
+    background-color: #F8F200;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    width: 624px;
+    padding: 70px;
+    clip-path: polygon(0 15%, 15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+.banner__text {
+    margin-bottom: 25px;
+}
+.banner__button {
+    background-color: #000;
+    width: 272px;
+    text-align: center;
+}
+.banner__button a{
+    display: inline-block;
+    padding: 19px 50px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    
+    color: #F8F200;
+}
+@media(max-width: 1024px){
+    .header{
+        background: url(../img/top10241.jpg);
+        background-size: 100% 100%;
+        animation: anim1024 10s linear infinite;
+    }
+}
+@media(max-width: 790px){
+    .title{
+        font-size: 30px;
+        line-height: 31px;
+    }
+    .banner{
+        padding: 30px;
+        left: 0;
+        width: 100%;
+    }
+    .header-top{
+        flex-direction: column;
+    }
+    .header-top__logo{
+        margin-bottom: 10px;
+    }
+    .banner-button a{
+        display: inline-block;
+        padding: 10px 50px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+@media(max-width: 490px){
+    .header-top__contact li{
+        margin-left: 20px;
+    } 
+    .header{
+        background: url(../img/top5001.jpg);
+        background-size: 100% 100%;
+        animation: anim500 10s linear infinite;
+    }
+}
+
+
+
+/*  */
+.info {
+    padding: 70px 0px;
+}
+
+.info-inner {
+}
+.info-title {
+    margin-bottom: 25px;
+    max-width: 1000px;
+}
+.info-text {
+    margin-bottom: 70px;
+    font-size: 18px;
+    line-height: 34px;
+    max-width: 1000px;
+}
+.info-text span{
+    color: #52BEDC;
+    font-weight: 700;
+}
+.info-images {
+    display: flex;
+    justify-content: space-between;
+}
+.info-images img{
+    clip-path: polygon(0 15%, 15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+    width: 100%;
+}
+.info-images__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.one {
+}
+.two {
+    
+}
+.info-images__right {
+    margin-left: 32px;
+}
+@media (max-width: 1024px) {
+    .info-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .info-images__left {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 32px;
+        justify-content: space-between;
+    }
+    .info-images__right {
+        margin-left: 0;
+    }
+    .two{
+        margin-left: 32px;
+    }
+}
+@media(max-width: 790px){
+    .info-images__left{
+        display: block;
+        
+    }
+    .one{
+        margin-bottom: 32px;
+    }
+    .two{
+        margin-left: 0;
+    }
+}
+/*  */
+.play{
+    background: #000;
+    padding: 70px 0px;
+    position: relative;
+}
+.play::before{
+    content: "";
+    position: absolute;
+    background: url(../img/play-linetop.png);
+    top: -50px;
+    width: 100%;
+    height: 60px;
+
+
+}
+.play::after{
+    content: "";
+    position: absolute;
+    background: url(../img/play-linebottom.png);
+    bottom: -50px;
+    width: 100%;
+    height: 60px;
+}
+.play-inner {
+    position: relative;
+}
+.play-inner::before{
+    content: "";
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    top: -45px;
+    background: url(../img/action.png) no-repeat;
+ 
+}
+.play-inner::after{
+    content: "";
+    position: absolute;
+    width: 788px;
+    height: 456px;
+    right: 0;
+    bottom: 0;
+    background: url(../img/Xbox.png) no-repeat 30% 30px,url(../img/Playstation-5-games-console-transparent-background-png-image.png) no-repeat 100% 30px,url(../img/blueZ.png) no-repeat 100% 0px, url(../img/YellowZ.png) no-repeat 0% 0px;
+ 
+}
+.play-inner__title {
+    color: #fff;
+    margin-bottom: 40px;
+    padding-left: 150px;
+}
+.play-inner__text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    max-width: 1000px;
+    line-height: 34px;
+    margin-bottom: 95px;
+}
+.play-inner__text span{
+    color: #52BEDC;
+    font-weight: 700;
+}
+.play-inner__form {
+    position: relative;
+    z-index: 11;
+}
+.play-inner__form input[type="text"], .play-inner__form input[type="email"]{
+    outline: none;
+    display: block;
+    background: transparent;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #777;
+    font-size: 18px;
+    line-height: 21px;
+    width: 460px;
+    color: #fff;
+    margin-bottom: 35px;
+}
+.play-inner__form input[type="file"]{
+    border: 2px dashed #777;
+    padding: 39px 0px;
+}
+.play-inner__form button{
+    padding: 19px 50px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    background: #F8F200;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.play-inner__form-file{
+    color: #fff;
+    border: 1px dashed #777;
+    padding: 39px 0px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    background: #000;
+    text-decoration: underline;
+    font-size: 18px;
+    width: 460px;
+    margin-bottom: 35px;
+    position: relative;
+}
+.play-inner__form-file span{
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    font-size: 12px;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.screen {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
+.real-check{
+    opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+
+.play-inner__form-check{
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    padding-left: 25px;
+    display: block;
+}
+.custom-check{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #777;
+    position: absolute;
+    padding-top: 2px;
+    left: 0;
+}
+.real-check:checked + .custom-check::before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(../img/check.svg) no-repeat;
+    background-size: contain;
+}
+.real-check:focus + .custom-check{
+    border: 2px solid #fff;
+}
+@media (max-width: 1024px){
+    .play-container{
+        max-width: 500px;
+    }
+    .play-inner__title{
+        padding-left: 0px;
+        padding-top: 100px;
+    }
+    .play-inner::after{
+        width: 460px;
+        height: 858px;
+        background: url(../img/Xbox.png) no-repeat 80% 0%, url(../img/Playstation-5-games-console-transparent-background-png-image.png) no-repeat 80% 84%, url(../img/blueZ.png) no-repeat -10px 100%, url(../img/YellowZ.png) no-repeat 0% 0px;
+    }
+}
+@media(max-width: 790px){
+    .play-inner__form input[type="text"], .play-inner__form input[type="email"],.play-inner__form-file{
+        width: 100%;
+    }
+    .play-inner__title{
+        padding-top: 300px;
+    }
+    .play-inner::after{
+        width: 100%;
+        height: 130px;
+        background: url(../img/Xbox790.png) no-repeat 15% 1px, url(../img/Playstation-5790-games-console-transparent-background-png-image.png) no-repeat 80% 10px, url(../img/blueZ790.png) no-repeat 80% 10px, url(../img/YellowZ790.png) no-repeat 10% 0px;
+        top: 10%;
+        left: 0;
+    }
+        
+}
+/*  */
+.full{
+    background: #F8F200;
+    padding: 70px 0px;
+}
+
+.full-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.full-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.full-left__monic {
+    margin-bottom: 26px;
+}
+.full-left__sponsor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.full-right {
+    font-size: 18px;
+    margin-left: 25px;
+}
+.full-title {
+    margin-bottom: 25px;
+}
+.full-text {
+    line-height: 34px;
+    margin-bottom: 25px;
+}
+.full-list {
+    margin-bottom: 40px;
+}
+.full-list li{
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+.full-list li:nth-child(1)::before{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0;
+    background: url(../img/Vector.svg) no-repeat;
+}
+.full-list li:nth-child(2)::before{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0;
+    top: -5px;
+    background: url(../img/Vector\ \(1\).svg) no-repeat;
+}
+.full-list li:nth-child(3)::before{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0;
+    background: url(../img/Vector\ \(2\).svg) no-repeat;
+}
+.full-btn {
+    background-color: #000;
+    width: 272px;
+    text-align: center;
+}
+.full-btn a{
+    display: inline-block;
+    padding: 19px 50px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #F8F200;
+}
+@media (max-width: 1024px) {
+    .full-left__monic img {
+        width: 100%;
+    }
+    .full-left__sponsor{
+        display: flex;
+        flex-direction: column;
+    }
+    .full-left__sponsor img{
+        margin-bottom: 25px;
+    }
+    .full-left {
+        justify-content: space-around;
+    }
+}
+@media(max-width: 790px){
+    .full-inner{
+        display: block;
+    }
+}
+/*  */
+.buy {
+    background: #000;
+}
+
+.buy-inner {
+    width: 100%;
+    padding: 0px;
+    display: flex;
+}
+.buy-left {
+    max-width: 50%;
+    overflow: hidden;
+}
+.buy-left img{
+    height: 100%;
+}   
+.buy-right {
+    padding: 70px 20px;
+    width: 50%;
+}
+.buy-title {
+    color: #fff;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+.buy-subtitle {
+    font-size: 24px;
+    color: #52BEDC;
+    margin-bottom: 15px;
+}
+.buy-list {
+    color: #fff;
+    margin-bottom: 70px;
+}
+.buy-list li{
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+.buy-list li:nth-child(1)::before{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: -5px;
+    left: -2px;
+    background: url(../img/Subtract.svg) no-repeat;
+}
+.buy-list li:nth-child(2)::before{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0;
+    top: -5px;
+    background: url(../img/Vector\ \(3\).svg) no-repeat;
+}
+.buy-list li:nth-child(3)::before{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0;
+    background: url(../img/Vector\ \(4\).svg) no-repeat;
+}
+.buy-platforms {
+    width: 380px;
+}
+.buy-platforms img{
+    margin-bottom: 40px;
+    margin-right: 70px;
+}
+@media(max-width: 1024px) {
+    .buy-left {
+        max-width: 35%;
+    }
+    .buy-right {
+        width: 65%;
+    }
+}
+@media(max-width: 790px) {
+    .buy-left {
+        max-width: 100%;
+
+    }
+    .buy-right {
+        width: 100%;
+    }
+    .buy-inner {
+
+        display: block;
+    }
+    .buy-platforms{
+        width: 100%;
+    }
+    .buy-platforms img{
+        margin-bottom: 40px;
+        margin-right: 30px;
+    }
+}
+/*  */
+.license {
+    padding: 13px 0px;
+}
+.license-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.license-logo img{
+    margin-right: 32px;
+}
+.license-text {
+}
+.license-text a{
+    display: inline-block;
+    margin-left: 32px;
+    color: #000;
+    font-size: 18px;
+    
+}
+@media(max-width: 790px) {
+    .license{
+        padding: 13px 0px 0px 0px;
+    }
+    .license-logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    .license-text{
+        padding: 25px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #e6e6e6;
+    }
+    .license-text a{
+        margin-bottom: 15px;
+    }
+    .license-inner {
+        display: block;
+        padding: 0px 0px;
+        width: 100%;
+    }
+}
+/*  */
+footer{
+    width: 100%;
+    padding: 13px 0px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
