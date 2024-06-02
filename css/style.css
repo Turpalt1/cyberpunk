@@ -222,6 +222,17 @@ body{
         margin-left: 0;
     }
 }
+@media (max-width: 490px) {
+    .info-inner{
+        padding: 0px 0px;
+    }
+    .info-title {
+        padding: 0px 36px;
+    }
+    .info-text {
+        padding: 0px 36px;
+    }
+}
 /*  */
 .play{
     background: #000;
